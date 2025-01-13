@@ -4,9 +4,10 @@ padding: 0px;
 margin: 0px;
 list-style-type: none;
 display: flex;
-align-items: baseline; 
+flex-wrap:wrap ;
+align-content: space-around;  
 background-color: yellow;
-height: 600px;
+height: 900px;
 
 }
 
@@ -14,7 +15,7 @@ height: 600px;
 background-color: rgb(0, 165, 255);  
 padding: 5px;
 width: 200px;
-height: 150px;  
+/* height: 150px;   */
 margin-top: 10px; 
 line-height: 150px;
 color: white;
@@ -25,17 +26,3 @@ border: solid 3px red;
 
 }
 
-.FlexItem1{
-    background-color: rgb(0, 165, 255);  
-    padding: 5px;
-    width: 200px;
-    height: 150px;  
-    margin-top: 10px; 
-    line-height: 150px;
-    color: white;
-    font-weight: bolder;
-    font-size: 200px;
-    text-align:center ;
-    border: solid 3px red;
-    
-    }
