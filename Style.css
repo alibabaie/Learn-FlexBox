@@ -1,76 +1,83 @@
 
-*{
-    box-sizing: border-box;
+.Header , .Nav{
+display: flex;
+flex-direction: column;    
 }
 
-body{
-    font-family: "Montserrat",sans-serif;
-    line-height:1.6 ;
-    margin: 0px;
+.Header{
+justify-content:space-between ;    
 }
 
-ul{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
-
-a{
-  color:crimson;  
-  text-decoration: none;
-}
-
-.Logo{
-font-size: 1.5em;
-}
-
-.Main-Nav{
-margin-top:5px ;   
-}
-
-.Logo a,.Main-Nav a{
-padding: 10px 15px; 
-text-transform: uppercase;
-display: block;
-text-align: center;  
-}
-
-.Main-Nav a{
-font-size: 1em;    
-}
-
-.Main-Nav a:hover{
-color: blue;    
-}
-
-.header{
-padding-top: .5em; 
-padding-bottom: .5em; 
-border: 1px solid  rgb(139, 238, 114); 
-border-radius: 5px;
-background-color:beige;
-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .75) ;
+.Nav{
+flex: 1;
+justify-content: space-around;        
 }
 
 /* Media Queries */
 
-@media (min-width: 770px){
-.header , .Main-Nav{
-display: flex;    
-}
-.header{
-    flex-direction:column ;
-    align-items: center;
-    width:80% ;
-    margin: 0 auto;
-    max-width: 1150px;
+@media all and (min-width:650px) {
+.Header , .Nav{
+flex-direction: row;    
+}    
+} 
 
-}   
+@media all and (min-width:1050px) {
+.Nav{
+flex: none;    
+}    
+} 
+
+@media all and (min-width:1050px) {
+    .Header{
+    width: 1700px; 
+    min-width:800px ;   
+    }    
+    }
+
+/* Styling */
+
+body{
+margin: 0px; 
+font-family: Helvetica ;
+background: url("new-opto-pics-9.jpg") top center no-repeat ;
+background-size: cover;
 }
 
-@media (min-width: 1025px){
-.header{
-flex-direction:row ;    
-justify-content: space-between;
+.Header{
+padding:20px 0px ;
+margin: 0 auto;
 }
+
+.Logo{
+width: 150px;   
+}
+
+.Nav{
+    list-style: none;
+}
+
+.Nav li{
+margin: 12px 10px 12px 30px;    
+}
+
+.Nav li a{
+text-decoration: none;
+color:blue;   
+font-size: 12px; 
+}
+
+.Nav li a:hover{
+color: rgba(255, 255, 255, .75); 
+}
+
+.Nav li:last-child a{
+background-color: rgba(80, 79, 79, 0.5);
+border-radius: 2px; 
+transition: 200ms ease-in-out;
+padding: 8px 16px 8px;
+}
+
+.Nav li:last-child a:hover{
+background:rgba(128, 126, 126, 0.5);
+color:white ;
 }
