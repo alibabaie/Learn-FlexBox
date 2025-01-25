@@ -15,6 +15,12 @@ html{
 
 }
 
+* , *::after , ::before {
+    margin: 0;
+    padding: 0;
+}
+
+
 body{
     font-family: var(--mainfont);
 }
@@ -36,6 +42,16 @@ body{
 
 .Button:hover{
     background-color: rgb(1, 123, 136);
+}
+
+h2,h3{
+    text-align: center;
+}
+
+h3{
+    color: var(--secondary);
+    font-weight: 400;
+    font-size: 1.6rem;
 }
 
 p{
@@ -102,4 +118,44 @@ p{
 .Hero-Content i{
     font-size: 3rem;
     color: var(--primary);
+}
+
+.Container{
+    margin: 2rem auto 3rem auto;
+    padding: 2rem;
+    background-color: var(--white);
+    max-width: 1700px;
+    box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, .45);
+    border-radius: 1rem;
+}
+
+@media (min-width:768px) {
+    .Services-Container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Service{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
+
+.Service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Icons{
+    background-color: var(--primary);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.Icons i{
+    font-size: 2rem;
 }
