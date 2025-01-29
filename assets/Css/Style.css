@@ -74,6 +74,8 @@ nav ul li a{
     }
 }
 
+/* With Icon */
+
 .Icons ul li a{
     display: flex;
     justify-content: center;
@@ -115,4 +117,53 @@ nav ul li a{
         flex:1 ;
     }
 }
+
+/* Dropdown Menu */
     
+.Dropdown ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.Dropdown ul li{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.Dropdown ul li ul{
+    margin-top: 1rem;
+    display: none;
+}
+
+.Dropdown ul li:hover ul{
+    display: block;
+}
+
+.Dropdown ul li ul li:hover{
+    background-color: #ff5e62;
+}
+
+@media screen and (min-width:768px) {
+    .Dropdown ul{
+        flex-direction: row;
+    }
+    .Dropdown ul li{
+        position: relative;
+        display: flex;
+        flex: 0 1 100%;
+    }
+    .Dropdown ul li ul{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    .Dropdown ul li:hover ul{
+       display: flex;
+       flex-wrap: wrap;
+       background-color: #ff5e62;
+       margin: 0;
+    } 
+}
