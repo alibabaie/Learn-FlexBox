@@ -18,7 +18,7 @@ body{
     max-width: 1500px;
     /* min-height: 95vh; */
     min-height: calc(100vh - 40px);
-    margin: 0 auto;
+    margin: 0 auto ;
     padding: 20px 30px 0 30px;
 }
 
@@ -71,6 +71,48 @@ nav ul li a{
 
     .Simple ul li{
         margin-bottom: 0;
+    }
+}
+
+.Icons ul li a{
+    display: flex;
+    justify-content: center;
+    /* flex-grow: 1; */
+    flex: 1;
+}
+
+.Icons .Icon{
+    font-size: 2rem;
+    flex: 0 0 3rem;
+}
+
+.Icons .Text{
+    font-size: 1.4rem;
+}
+
+.Icons .Text span{
+    font-size: .8rem;
+    display: block;
+    margin-top: 10px;
+}
+
+@media screen and (min-width:480px) {
+    .Icons ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .Icons ul li{
+        display: flex;
+        flex: 0 0 calc(50% - 2rem);
+    }
+}
+
+@media screen and (min-width:768px) {
+    .Icons ul li{
+        display: flex;
+        /* flex-grow: 1; */
+        flex:1 ;
     }
 }
     
