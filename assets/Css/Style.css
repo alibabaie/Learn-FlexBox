@@ -1,237 +1,86 @@
 
-.html{
+:root{
+  --mainfont: 'Lora';
+  --primary:#1bb9e0;
+  --secondary:#db008d;
+  --gray:#e5e5e5;
+  --white:#ffffff;
+  --black:#000000;
+}
+
+html{
     box-sizing: border-box;
+
 }
 
 * , *::after , *::before{
+    /* box-sizing: border-box; */
     box-sizing: inherit;
+}
+
+img{
+    max-width: 100%;
+}
+
+p{
+    line-height: 2;
 }
 
 body{
     margin: 0;
-    background: linear-gradient(to right , #ff5e62 , #ff9966);
-    font-family: 'krub';
-}
-
-.Container{
-    background-color: white;
-    max-width: 1500px;
-    /* min-height: 95vh; */
-    min-height: calc(100vh - 40px);
-    margin: 0 auto ;
-    padding: 20px 30px 0 30px;
-}
-
-/* REUSED */
-
-nav{
-    background-color: #3f51b5;
-}
-
-nav ul{
-    list-style: none;
-    margin: 0;
     padding: 0;
+    font-size: 1.2rem;
+    font-family: var(--mainfont);
 }
 
-nav ul li{
-    padding: 1rem;
-}
-
-nav ul li:hover{
-    background-color: #1a2770;
-}
-
-nav ul li a{
-    color: white ;
-    text-decoration:none ;
-    font-size: 1.1rem;
-}
-
-/* Simple */
-
-.Simple ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.Simple ul li{
-    text-align: center;
-    margin-bottom: 20px;
-    /* flex-grow: 1; */
-    flex: 1;
-}
-
-@media screen and (min-width:768px){
-    .Simple ul{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .Simple ul li{
-        margin-bottom: 0;
-    }
-}
-
-/* With Icon */
-
-.Icons ul li a{
+.site-header{
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
-    /* flex-grow: 1; */
-    flex: 1;
+    align-items: center;
+    /* background-color: #db008d; */
 }
 
-.Icons .Icon{
-    font-size: 2rem;
-    flex: 0 0 3rem;
+.site-header img{
+    max-width: 80%;
 }
 
-.Icons .Text{
+.main-navigation{
+    background-color: var(--primary);
+    padding: 1rem 0;
+}
+
+.main-navigation ul{
+    max-width: 800px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.main-navigation ul li{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.main-navigation ul li:last-of-type{
+    margin-bottom: 0;
+}
+
+.main-navigation ul li a{
+    color: var(--white);
+    text-decoration: none;
     font-size: 1.4rem;
 }
 
-.Icons .Text span{
-    font-size: .8rem;
-    display: block;
-    margin-top: 10px;
-}
-
-@media screen and (min-width:480px) {
-    .Icons ul{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .Icons ul li{
-        display: flex;
-        flex: 0 0 calc(50% - 2rem);
-    }
-}
+/* Media Querie */
 
 @media screen and (min-width:768px) {
-    .Icons ul li{
-        display: flex;
-        /* flex-grow: 1; */
-        flex:1 ;
-    }
-}
-
-/* Dropdown Menu */
-    
-.Dropdown ul{
-    display: flex;
-    flex-direction: column;
-}
-
-.Dropdown ul li{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-}
-
-.Dropdown ul li ul{
-    margin-top: 1rem;
-    display: none;
-}
-
-.Dropdown ul li:hover ul{
-    display: block;
-}
-
-.Dropdown ul li ul li:hover{
-    background-color: #ff5e62;
-}
-
-@media screen and (min-width:768px) {
-    .Dropdown ul{
+    .main-navigation ul{
         flex-direction: row;
+        justify-content: space-between;
     }
-    .Dropdown ul li{
-        position: relative;
-        display: flex;
-        flex: 0 1 100%;
-    }
-    .Dropdown ul li ul{
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-    }
-    .Dropdown ul li:hover ul{
-       display: flex;
-       flex-wrap: wrap;
-       background-color: #ff5e62;
-       margin: 0;
-    } 
-}
-
-/* Social Menu */
-
-.Social-Menu ul li span{
-    display: none;
-}
-
-.Social-Menu ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
-    flex: 1 0 auto;
-}
-
-.Social-Menu ul li a::before{
-    font-family: "Font Awesome 5 Brands";
-}
-
-.Social-Menu ul li a[href*='facebook.com']::before{
-    content: "\f39e";
-}
-
-.Social-Menu ul li a[href*='twitter.com']::before{
-    content: "\f099";
-}
-
-.Social-Menu ul li a[href*='youtube.com']::before{
-    content: "\f431";
-}
-
-.Social-Menu ul li a[href*='instagram.com']::before{
-    content: "\f16d";
-}
-
-.Social-Menu ul li a[href*='pinterest.com']::before{
-    content: "\f231";
-}
-
-/* Dropdown Menu With Social */
-
-.Nav-Social-Dropdown{
-    background-color:#3f51b5;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.Nav-Social-Dropdown nav{
-    flex: 0 0 100%;
-}
-
-.Nav-Social-Dropdown .Social-Menu{
-    order: -1;
-}
-
-@media screen and (min-width:768px){
-    .Nav-Social-Dropdown nav{
-        flex: 0 0 auto;
-    }
-    .Nav-Social-Dropdown .Social-Menu{
-        /* order: 1; */
-        order: unset;
-    }
-    .Nav-Social-Dropdown .Dropdown{
-        flex: 0 0 70%;
+    .main-navigation ul li{
+        margin-bottom: 0;
     }
 }
-
