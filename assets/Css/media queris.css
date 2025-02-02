@@ -1,0 +1,10 @@
+
+@media (min-width:768px){
+    .main-content{
+        flex: 0 0 70%;
+    }
+    .sidebar{
+        flex: 0 0 30%;
+        order: -1;
+    }
+}

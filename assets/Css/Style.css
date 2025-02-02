@@ -63,7 +63,7 @@ body{
     text-align: center;
 }
 
-.main-navigation ul li:last-of-type{
+.main-navigation ul li:last-child{
     margin-bottom: 0;
 }
 
@@ -83,4 +83,56 @@ body{
     .main-navigation ul li{
         margin-bottom: 0;
     }
+}
+
+/* MAIN SIDEBAR NAVBAR */
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-content{
+    padding: 2rem;
+}
+
+.main-content , .sidebar{
+    flex: 0 0 100%;
+}
+
+.sidebar{
+    background-color: var(--gray);
+    padding: 2rem;
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar ul li{
+    margin-bottom: .8rem;
+}
+
+.sidebar ul li:last-child{
+    margin-bottom: 0;
+}
+
+.sidebar a{
+    color: var(--black);
+    text-decoration: none;
+}
+
+.sidebar a:hover{
+    color: var(--secondary);
+}
+
+.footer{
+    background-color: var(--secondary);
+}
+
+.footer p{
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--white);
 }
